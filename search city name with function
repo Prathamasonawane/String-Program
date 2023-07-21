@@ -1,0 +1,33 @@
+#include<string.h>
+int main()
+{
+	char s1[100][100],name[100];
+	int i,n;
+	void search(char s1[100][100],char name[20],int n);
+	printf("Enter Limit:");
+	scanf("%d",&n);
+	printf("Enter n City names:");
+	for(i=0;i<n;i++)
+	{
+		scanf("%s",&s1[i]);
+	}
+	printf("Enter city name To search:");
+	scanf("%s",&name);
+	search(s1,name,n);
+}
+void search(char s1[100][100],char name[20],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		if(strcmp(s1[i],name)==0)
+		{
+			break;
+		}
+	}printf("City name is not found");
+	if(i==n)
+		printf("City name is not found");
+	else
+		printf("City name is found");
+		
+}
