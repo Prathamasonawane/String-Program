@@ -1,0 +1,26 @@
+#include<string.h>
+int main()
+{
+	char s1[100],s2[100];
+	int k;
+	printf("Enter 1 string:");
+	gets(s1);
+	printf("Enter 2 string:");
+	gets(s2);
+	k=strcmp(s1,s2);
+	if(k>0)
+	{
+	printf("First string is greater");
+}
+	else if(k<0)
+{
+
+	printf("second string is greater");
+}
+	else if(k==0)
+{
+
+	printf("Equal");
+
+}
+}
