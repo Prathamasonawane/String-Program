@@ -1,0 +1,38 @@
+#include<string.h>
+int main()
+{
+	char s1[100],s2[100];
+	int k,ch; 
+	printf("Enter first string:");
+	gets(s1);
+	printf("enter second string:");
+	gets(s2);
+	printf("\n 1-length \n 2-compare \n 3-copy \n 4-concat");
+	do
+	{
+	printf("\n Enter your choice:");
+	scanf("%d",&ch);
+	switch (ch)
+	{
+		case 1:printf("length=%d",strlen(s1));
+			printf("length=%d",strlen(s2));
+			break;
+		case 2 :k=strcmp(s1,s2);
+		      if(k==0)
+		      printf("equal");
+		      else if(k>0)
+		      printf("First string greater");
+		      else if (k<0)
+		      printf("second string greater");
+		      break;
+		case 3:k=strcpy(s1,s2);
+		printf("\n copy string=%s",k);
+		       break;
+		case 4:printf("\n concate=%s",strcat(s1,s2));
+		     break;
+	default :printf("\Invalid");
+	      	break;
+			
+	}
+}while(ch<5);
+}
